@@ -16,7 +16,11 @@ import type {
 } from 'apollo-client';
 import type { DocumentNode, VariableDefinitionNode } from 'graphql';
 
+import { compose } from 'redux';
+
 declare module 'react-apollo' {
+  declare export compose;
+
   declare export type NetworkStatus = 1 | 2 | 3 | 4 | 6 | 7 | 8;
 
   declare export interface ProviderProps {
